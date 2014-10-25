@@ -1,2 +1,2 @@
-startbootstrap-business-frontpage
-=================================
+Start Bootstrap - Business Frontpage
+=========
