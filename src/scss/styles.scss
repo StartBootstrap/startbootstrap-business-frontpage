@@ -1,2 +1,12 @@
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
+
+// Custom SCSS for feature component with Bootstrap icon
+.feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+}

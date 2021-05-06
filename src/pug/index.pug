@@ -13,104 +13,250 @@ html(lang='en')
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
+        // Bootstrap icons
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css', rel='stylesheet')
+
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
 
     body
 
-        // Navigation
+        // Responsive navbar
         nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-            .container
+            .container.px-5
                 a.navbar-brand(href='#!') Start Bootstrap
-                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
                     span.navbar-toggler-icon
-                #navbarResponsive.collapse.navbar-collapse
-                    ul.navbar-nav.ml-auto
-                        li.nav-item.active
-                            a.nav-link(href='#!')
-                                | Home
-                                span.sr-only (current)
+                #navbarSupportedContent.collapse.navbar-collapse
+                    ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+                        li.nav-item
+                            a.nav-link.active(aria-current='page', href='#!') Home
                         li.nav-item
                             a.nav-link(href='#!') About
                         li.nav-item
-                            a.nav-link(href='#!') Services
-                        li.nav-item
                             a.nav-link(href='#!') Contact
+                        li.nav-item
+                            a.nav-link(href='#!') Services
 
         // Header
-        header.bg-primary.py-5.mb-5
-            .container.h-100
-                .row.h-100.align-items-center
-                    .col-lg-12
-                        h1.display-4.text-white.mt-5.mb-2 Business Name or Tagline
-                        p.lead.mb-5.text-white-50
-                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non possimus ab labore provident mollitia. Id assumenda voluptate earum corporis facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas ipsam.
+        header.bg-dark.py-5
+            .container.px-5
+                .row.gx-5.justify-content-center
+                    .col-lg-6
+                        .text-center.my-5
+                            h1.display-5.fw-bolder.text-white.mb-2 Present your business in a whole new way
+                            p.lead.text-white-50.mb-4 Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit! 
+                            .d-grid.gap-3.d-sm-flex.justify-content-sm-center
+                                a.btn.btn-primary.btn-lg.px-4.me-sm-3(href='#features') Get Started
+                                a.btn.btn-outline-light.btn-lg.px-4(href='#!') Learn More
 
-        // Page Content
-        .container
-            .row
-                .col-md-8.mb-5
-                    h2 What We Do
-                    hr
-                    p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!
-                    p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.
-                    a.btn.btn-primary.btn-lg(href='#!') Call to Action »
-                .col-md-4.mb-5
-                    h2 Contact Us
-                    hr
-                    address
-                        strong Start Bootstrap
-                        br
-                        | 3481 Melrose Place
-                        br
-                        | Beverly Hills, CA 90210
-                        br
-                    address
-                        abbr(title='Phone') P:
-                        | (123) 456-7890
-                        br
-                        abbr(title='Email') E:
-                        a(href='mailto:#') name@example.com
+        // Features section
+        section#features.py-5.border-bottom
+            .container.px-5.my-5
+                .row.gx-5
+                    .col-lg-4.mb-5.mb-lg-0
+                        .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+                            i.bi.bi-collection
+                        h2.h4.fw-bolder Featured title
+                        p
+                            | Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
+                        a.icon-link.text-decoration-none(href='#!')
+                            | Call to action
+                            i.bi.bi-arrow-right
+                    .col-lg-4.mb-5.mb-lg-0
+                        .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+                            i.bi.bi-building
+                        h2.h4.fw-bolder Featured title
+                        p
+                            | Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
+                        a.icon-link.text-decoration-none(href='#!')
+                            | Call to action
+                            i.bi.bi-arrow-right
+                    .col-lg-4
+                        .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+                            i.bi.bi-toggles2
+                        h2.h4.fw-bolder Featured title
+                        p
+                            | Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
+                        a.icon-link.text-decoration-none(href='#!')
+                            | Call to action
+                            i.bi.bi-arrow-righr
 
-            .row
-                .col-md-4.mb-5
-                    .card.h-100
-                        img.card-img-top(src='https://via.placeholder.com/300x200', alt='...')
-                        .card-body
-                            h4.card-title Card title
-                            p.card-text
-                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.
-                        .card-footer
-                            a.btn.btn-primary(href='#!') Find Out More!
-                .col-md-4.mb-5
-                    .card.h-100
-                        img.card-img-top(src='https://via.placeholder.com/300x200', alt='...')
-                        .card-body
-                            h4.card-title Card title
-                            p.card-text
-                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.
-                        .card-footer
-                            a.btn.btn-primary(href='#!') Find Out More!
-                .col-md-4.mb-5
-                    .card.h-100
-                        img.card-img-top(src='https://via.placeholder.com/300x200', alt='...')
-                        .card-body
-                            h4.card-title Card title
-                            p.card-text
-                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
-                        .card-footer
-                            a.btn.btn-primary(href='#!') Find Out More!
+        // Pricing section
+        section.bg-light.py-5.border-bottom
+            .container.px-5.my-5
+                .text-center.mb-5
+                    h2.fw-bolder Pay as you grow
+                    p.lead.mb-0 With our no hassle pricing plans
+                .row.gx-5.justify-content-center
+                    // Pricing card free
+                    .col-lg-6.col-xl-4
+                        .card.mb-5.mb-xl-0
+                            .card-body.p-5
+                                .small.text-uppercase.fw-bold.text-muted Free
+                                .mb-3
+                                    span.display-4.fw-bold $0
+                                    span.text-muted / mo.
+                                ul.list-unstyled.mb-4
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        strong 1 users
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | 5GB storage
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | Unlimited public projects
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | Community access
+                                    li.mb-2.text-muted
+                                        i.bi.bi-x
+                                        | Unlimited private projects
+                                    li.mb-2.text-muted
+                                        i.bi.bi-x
+                                        | Dedicated support
+                                    li.mb-2.text-muted
+                                        i.bi.bi-x
+                                        | Free linked domain
+                                    li.text-muted
+                                        i.bi.bi-x
+                                        | Monthly status reports
+                                .d-grid
+                                    a.btn.btn-outline-primary(href='#!') Choose plan
+                    // Pricing card pro
+                    .col-lg-6.col-xl-4
+                        .card.mb-5.mb-xl-0
+                            .card-body.p-5
+                                .small.text-uppercase.fw-bold
+                                    i.bi.bi-star-fill.text-warning
+                                    | Pro
+                                .mb-3
+                                    span.display-4.fw-bold $9
+                                    span.text-muted / mo.
+                                ul.list-unstyled.mb-4
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        strong 5 users
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | 5GB storage
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | Unlimited public projects
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | Community access
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | Unlimited private projects
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | Dedicated support
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | Free linked domain
+                                    li.text-muted
+                                        i.bi.bi-x
+                                        | Monthly status reports
+                                .d-grid
+                                    a.btn.btn-primary(href='#!') Choose plan
+                    // Pricing card enterprise
+                    .col-lg-6.col-xl-4
+                        .card
+                            .card-body.p-5
+                                .small.text-uppercase.fw-bold.text-muted Enterprise
+                                .mb-3
+                                    span.display-4.fw-bold $49
+                                    span.text-muted / mo.
+                                ul.list-unstyled.mb-4
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        strong Unlimited users
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | 5GB storage
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | Unlimited public projects
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | Community access
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | Unlimited private projects
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        | Dedicated support
+                                    li.mb-2
+                                        i.bi.bi-check.text-primary
+                                        strong Unlimited
+                                        | linked domains
+                                    li.text-muted
+                                        i.bi.bi-check.text-primary
+                                        | Monthly status reports
+                                .d-grid
+                                    a.btn.btn-outline-primary(href='#!') Choose plan
+
+        // Testimonials section
+        section.py-5.border-bottom
+            .container.px-5.my-5.px-5
+                .text-center.mb-5
+                    h2.fw-bolder Customer testimonials
+                    p.lead.mb-0 Our customers love working with us
+                .row.gx-5.justify-content-center
+                    .col-lg-6
+                        // Testimonial 1
+                        .card.mb-4
+                            .card-body.p-4
+                                .d-flex
+                                    .flex-shrink-0
+                                        i.bi.bi-chat-right-quote-fill.text-primary.fs-1
+                                    .ms-4
+                                        p.mb-1 Thank you for putting together such a great product. We loved working with you and the whole team, and we will be recommending you to others!
+                                        .small.text-muted - Client Name, Location
+                        // Testimonial 2
+                        .card
+                            .card-body.p-4
+                                .d-flex
+                                    .flex-shrink-0
+                                        i.bi.bi-chat-right-quote-fill.text-primary.fs-1
+                                    .ms-4
+                                        p.mb-1 The whole team was a huge help with putting things together for our company and brand. We will be hiring them again in the near future for additional work!
+                                        .small.text-muted - Client Name, Location
+
+        // Contact section
+        section.bg-light.py-5
+            .container.px-5.my-5.px-5
+                .text-center.mb-5
+                    .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+                        i.bi.bi-envelope
+                    h2.fw-bolder Get in touch
+                    p.lead.mb-0 We'd love to hear from you
+                .row.gx-5.justify-content-center
+                    .col-lg-6
+                        form
+                            .form-floating.mb-3
+                                input#inputName.form-control(type='text', placeholder='Enter your name...')
+                                label(for='inputName') Full name
+                            .form-floating.mb-3
+                                input#inputEmail.form-control(type='email', placeholder='name@example.com')
+                                label(for='inputEmail') Email address
+                            .form-floating.mb-3
+                                input#inputPhone.form-control(type='tel', placeholder='(123) 456-7890')
+                                label(for='inputPhone') Phone number
+                            .form-floating.mb-3
+                                textarea#inputMessage.form-control(type='text', placeholder='Enter your message here...', style='height: 10rem;')
+                                label(for='inputMessage') Message
+
 
         // Footer
         footer.py-5.bg-dark
-            .container
+            .container.px-5
                 p.m-0.text-center.text-white Copyright &copy; Your Website 2021
 
         // Bootstrap core JS
-        script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
-        script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js')
 
         // Core theme JS
         script(src='js/scripts.js')
