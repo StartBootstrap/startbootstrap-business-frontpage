@@ -60,7 +60,7 @@ html(lang='en')
                         h2.h4.fw-bolder Featured title
                         p
                             | Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
-                        a.icon-link.text-decoration-none(href='#!')
+                        a.text-decoration-none(href='#!')
                             | Call to action
                             i.bi.bi-arrow-right
                     .col-lg-4.mb-5.mb-lg-0
@@ -69,7 +69,7 @@ html(lang='en')
                         h2.h4.fw-bolder Featured title
                         p
                             | Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
-                        a.icon-link.text-decoration-none(href='#!')
+                        a.text-decoration-none(href='#!')
                             | Call to action
                             i.bi.bi-arrow-right
                     .col-lg-4
@@ -78,9 +78,9 @@ html(lang='en')
                         h2.h4.fw-bolder Featured title
                         p
                             | Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
-                        a.icon-link.text-decoration-none(href='#!')
+                        a.text-decoration-none(href='#!')
                             | Call to action
-                            i.bi.bi-arrow-righr
+                            i.bi.bi-arrow-right
 
         // Pricing section
         section.bg-light.py-5.border-bottom
@@ -248,7 +248,8 @@ html(lang='en')
                             .form-floating.mb-3
                                 textarea#inputMessage.form-control(type='text', placeholder='Enter your message here...', style='height: 10rem;')
                                 label(for='inputMessage') Message
-
+                            .d-grid
+                                button.btn.btn-primary.btn-lg(type='submit') Submit
 
         // Footer
         footer.py-5.bg-dark
