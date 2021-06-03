@@ -264,9 +264,9 @@ html(lang='en')
                                     data-sb-validations='required,email'
                                 )
                                 label(for='email') Email address
-                                .invalid-feedback.d-none(data-sb-feedback='email:required')
+                                .invalid-feedback(data-sb-feedback='email:required')
                                     | An email is required.
-                                .invalid-feedback.d-none(data-sb-feedback='email:email')
+                                .invalid-feedback(data-sb-feedback='email:email')
                                     | Email is not valid.
                             
                             // Phone number input
@@ -277,7 +277,7 @@ html(lang='en')
                                     data-sb-validations='required'
                                 )
                                 label(for='phone') Phone number
-                                .invalid-feedback.d-none(data-sb-feedback='phone:required')
+                                .invalid-feedback(data-sb-feedback='phone:required')
                                     | A phone number is required.
                             
                             // Message input
@@ -289,7 +289,7 @@ html(lang='en')
                                     data-sb-validations='required'
                                 )
                                 label(for='message') Message
-                                .invalid-feedback.d-none(data-sb-feedback='message:required')
+                                .invalid-feedback(data-sb-feedback='message:required')
                                     | A message is required.
 
                             // Submit success message
